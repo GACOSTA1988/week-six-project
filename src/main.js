@@ -8,6 +8,7 @@ import './styles.css';
 $(document).ready(function() {
   $('#conInput').click(function() {
     const inputedCondition = $('#inputedCondition').val();
+    const inputedName = $('#inputedName').val();
 
 // THIS WILL RUN API CALL
     (async () => {
@@ -15,6 +16,13 @@ $(document).ready(function() {
       const response = await newDoctorByCondition.getDocByCondition(inputedCondition);
       console.log(response);
       getElements(response);
+    })();
+
+    (async () => {
+      let newDoctorByName = new DoctorByName();
+      const responseName = await newDoctorByName.getDocByName(inputedName);
+      console.log(responseName);
+      // getElements(responseName);
     })();
 
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
