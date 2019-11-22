@@ -13,7 +13,6 @@
 5. Will return notification if search query results come back empty(do not bring back results)
 
 
-
 ## Setup/Installation Requirements
 
 * Clone portfolio this repository
