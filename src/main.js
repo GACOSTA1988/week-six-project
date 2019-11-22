@@ -7,7 +7,8 @@ import 'bootstrap';
 import './styles.css';
 
 $(document).ready(function() {
-  $('#conInput').click(function() {
+  $('#conInput').click(function(event) {
+    event.preventDefault();
     const inputedCondition = $('#inputedCondition').val();
     const inputedName = $('#inputedName').val();
 
@@ -19,10 +20,9 @@ $(document).ready(function() {
       getElements(response);
     })();
 
-
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
     function getElements(response) {
-      $(".showConditionSection").text(`If you are experiencing ${inputedCondition} symptoms you can reach out the the following doctors:`);
+      $("#showConditionSection").text(`If you are experiencing ${inputedCondition} symptoms you can reach out the the following doctors:`);
       $("#doc1").text(`${response.data[0].profile.first_name} ${response.data[0].profile.middle_name} ${response.data[0].profile.last_name}, ${response.data[0].profile.title}`);
       $("#doc2").text(`${response.data[1].profile.first_name} ${response.data[1].profile.middle_name} ${response.data[1].profile.last_name}, ${response.data[1].profile.title}`);
       $("#doc3").text(`${response.data[2].profile.first_name} ${response.data[2].profile.middle_name} ${response.data[2].profile.last_name}, ${response.data[2].profile.title}`);

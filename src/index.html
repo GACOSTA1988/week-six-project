@@ -15,24 +15,29 @@
         <label for="conditionInputSection">Please input your condition below!</label>
         <input id="inputedCondition" placeholder="Cold" type="text">
         <button class="btn-success" id="conInput">Submit</button>
-        <!-- SEARCH DOC BY NAME -->
+        <!-- Will BE HIDDEN TILL CONDTION BTN IS CLICKED -->
+        <br>
+        <h2><span id="showConditionSection"></span></h2>
+        <ul>
+          <li><span id="doc1"></span></li>
+          <li><span id="doc2"></span></li>
+          <li><span id="doc3"></span></li>
+          <li><span id="doc4"></span></li>
+          <li><span id="doc5"></span></li>
+        </ul>
+
+        <!-- QUICK FIX FOR NOW/FUNCTION DELEGATION -->
         <h2>Or</h2>
+
+        <!-- SEARCH DOC BY NAME -->
         <p>Search doctors by first or last name</p>
         <label for="nameInputSection">Please input desired doctors name below!</label>
         <input id="inputedName" placeholder="Mark" type="text">
         <button class="btn-success" id="nameInput">Submit</button>
         <!-- SHOW SEARCH BY CONDITION RESULTS -->
-          <div class="showConditionSection"></div>
-          <ul>
-            <li> <span id="doc1"></span></li>
-            <li> <span id="doc2"></span></li>
-            <li> <span id="doc3"></span></li>
-            <li> <span id="doc4"></span></li>
-            <li> <span id="doc5"></span></li>
-          </ul>
 
-        </div>
       </div>
     </div>
-  </body>
-  </html>
+  </div>
+</body>
+</html>
