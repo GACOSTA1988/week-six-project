@@ -38,7 +38,17 @@ $(document).ready(function() {
       let newDoctorByName = new DoctorByName();
       const responseName = await newDoctorByName.getDocByName(inputedName);
       console.log(responseName);
-      // getElements(responseName);
+      getElements(responseName);
     })();
+
+    // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
+    function getElements(responseName) {
+      $("#showByNameSection").text(`The following doctors names best match ${inputedName}:`);
+      $("#docByName1").text(`${responseName.data[0].profile.first_name} ${responseName.data[0].profile.middle_name} ${responseName.data[0].profile.last_name}, ${responseName.data[0].profile.title}`);
+      $("#docByName2").text(`${responseName.data[1].profile.first_name} ${responseName.data[1].profile.middle_name} ${responseName.data[1].profile.last_name}, ${responseName.data[1].profile.title}`);
+      $("#docByName3").text(`${responseName.data[2].profile.first_name} ${responseName.data[2].profile.middle_name} ${responseName.data[2].profile.last_name}, ${responseName.data[2].profile.title}`);
+      $("#docByName4").text(`${responseName.data[3].profile.first_name} ${responseName.data[3].profile.middle_name} ${responseName.data[3].profile.last_name}, ${responseName.data[3].profile.title}`);
+      $("#docByName5").text(`${responseName.data[4].profile.first_name} ${responseName.data[4].profile.middle_name} ${responseName.data[4].profile.last_name}, ${responseName.data[4].profile.title}`);
+    }
   });
 });

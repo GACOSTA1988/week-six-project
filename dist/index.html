@@ -16,25 +16,36 @@
         <input id="inputedCondition" placeholder="Cold" type="text">
         <button class="btn-success" id="conInput">Submit</button>
         <!-- Will BE HIDDEN TILL CONDTION BTN IS CLICKED -->
-        <div class="showConditionSection">
+        <br>
+        <h2><span id="showConditionSection"></span></h2>
         <ul>
-         <span id="doc1"></span>
-         <span id="doc2"></span>
-         <span id="doc3"></span>
-         <span id="doc4"></span>
-         <span id="doc5"></span>
+          <li><span id="doc1"></span></li>
+          <li><span id="doc2"></span></li>
+          <li><span id="doc3"></span></li>
+          <li><span id="doc4"></span></li>
+          <li><span id="doc5"></span></li>
         </ul>
-      </div>
-        <!-- SEARCH DOC BY NAME -->
+
+        <!-- QUICK FIX FOR NOW/FUNCTION DELEGATION -->
         <h2>Or</h2>
+
+        <!-- SEARCH DOC BY NAME -->
         <p>Search doctors by first or last name</p>
         <label for="nameInputSection">Please input desired doctors name below!</label>
         <input id="inputedName" placeholder="Mark" type="text">
         <button class="btn-success" id="nameInput">Submit</button>
         <!-- SHOW SEARCH BY CONDITION RESULTS -->
+        <h2><span id="showByNameSection"></span></h2>
+        <ul>
+          <li><span id="docByName1"></span></li>
+          <li><span id="docByName2"></span></li>
+          <li><span id="docByName3"></span></li>
+          <li><span id="docByName4"></span></li>
+          <li><span id="docByName5"></span></li>
+        </ul>
 
-        </div>
       </div>
     </div>
-  <script type="text/javascript" src="bundle.js"></script></body>
-  </html>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
