@@ -44,11 +44,26 @@ $(document).ready(function() {
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
     function getElements(responseName) {
       $("#showByNameSection").text(`The following doctors names best match ${inputedName}:`);
+
       $("#docByName1").text(`${responseName.data[0].profile.first_name} ${responseName.data[0].profile.middle_name} ${responseName.data[0].profile.last_name}, ${responseName.data[0].profile.title}`);
+      $("#docPhone1").text(`Phone Number: ${responseName.data[0].practices[0].phones[0].number}`);
+      $("#docWebSite1").text(`Doctor Website: ${responseName.data[0].practices[0].website}`);
+
       $("#docByName2").text(`${responseName.data[1].profile.first_name} ${responseName.data[1].profile.middle_name} ${responseName.data[1].profile.last_name}, ${responseName.data[1].profile.title}`);
+      $("#docPhone2").text(`Phone Number: ${responseName.data[1].practices[1].phones[1].number}`);
+      $("#docWebSite2").text(`Doctor Website: ${responseName.data[1].practices[1].website}`);
+
       $("#docByName3").text(`${responseName.data[2].profile.first_name} ${responseName.data[2].profile.middle_name} ${responseName.data[2].profile.last_name}, ${responseName.data[2].profile.title}`);
+      $("#docPhone3").text(`Phone Number: ${responseName.data[2].practices[2].phones[2].number}`);
+      $("#docWebSite3").text(`Doctor Website: ${responseName.data[2].practices[2].website}`);
+
       $("#docByName4").text(`${responseName.data[3].profile.first_name} ${responseName.data[3].profile.middle_name} ${responseName.data[3].profile.last_name}, ${responseName.data[3].profile.title}`);
+      $("#docPhone4").text(`Phone Number: ${responseName.data[3].practices[3].phones[3].number}`);
+      $("#docWebSite4").text(`Doctor Website: ${responseName.data[3].practices[3].website}`);
+
       $("#docByName5").text(`${responseName.data[4].profile.first_name} ${responseName.data[4].profile.middle_name} ${responseName.data[4].profile.last_name}, ${responseName.data[4].profile.title}`);
+      $("#docPhone5").text(`Phone Number: ${responseName.data[4].practices[4].phones[4].number}`);
+      $("#docWebSite5").text(`Doctor Website: ${responseName.data[4].practices[4].website}`);
     }
   });
 });
