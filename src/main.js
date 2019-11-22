@@ -6,20 +6,20 @@ import 'bootstrap';
 import './styles.css';
 
 $(document).ready(function() {
-  $('#').click(function() {
-    const inputedCondition = $('#condition').val();
+  $('#conInput').click(function() {
+    const inputedCondition = $('#inputedCondition').val();
 
     (async () => {
-          let newDoctorByCondition = new DoctorByCondition();
-          const response = await personalInfo.getDocByCondition(inputedCondition);
+      let newDoctorByCondition = new DoctorByCondition();
+      const response = await personalInfo.getDocByCondition(inputedCondition);
+      console.log(response);
+      getElements(response);
+    })();
+    // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
+    // function getElements(response) {
+      //   $(".showCondition").text(`If you are experiencing ${inputedCondition} symptoms you can reach out the the following doctors: ${}`);
+      //
+      // }
 
-          getElements(response);
-        })();
-        // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
-      function getElements(response) {
-        $(".showCondition").text(`If you are experiencing ${inputedCondition} symptoms you can reach out the the following doctors: ${}`);
-
-      }
-
+    });
   });
-});

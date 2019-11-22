@@ -8,7 +8,7 @@ export class DoctorByCondition {
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
     } catch(error) {
-      alert("sorry website is grumpy, check back later!");
+      alert("sorry website is grumpy, check back later!" + error.message);
       console.error("There was an error handling your request: " + error.message);
     }
   }
