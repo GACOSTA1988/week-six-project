@@ -1,15 +1,16 @@
-# CIA-API
+# FIND BETTER DOCTOR APP
 
-#### This application allows you to enter your phone number and submit to receive your personal info and an insult.
+#### This application allows you to enter sickness symptoms or doctor name to receive list of local providers in your area.
 
 #### By George Acosta
 
 ## Specifications
 
-1. Takes a persons phone number and returns the persons name
-2. Takes a persons phone number and returns the persons address
-3. Takes a persons phone number and returns the persons associated people.
-4. Returns a insult when person submits their phone number
+1. Takes a persons medical issue to and returns a list of doctors in the Portland   area that fit the search.
+2. Takes a requested doctors name and returns all providers that fit the search.
+3. Takes a search query and returns: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.
+4. Will return error notice search query results in an error notice including code details.
+5. Will return notification if search query results come back empty(do not bring back results)
 
 
 
@@ -17,9 +18,9 @@
 
 * Clone portfolio this repository
 * Open terminal and run NPM install
-* Visit Ekata website and get API key for REVERSE PHONE api
+* Visit https://developer.betterdoctor.com/ website and get API key
 * Create .env file in root directory
-* Save key in .env in the following format: CIA =[YOUR API KEY]
+* Save key in .env in the following format: API_KEY=[YOUR API KEY]
 * Run NPM build
 * RUN NPM Start to view in local server
 
@@ -41,8 +42,8 @@
 12. html-webpack-plugin
 13. clean-webpack-plugin
 14. babel
-14. ekata API
-15. Evil Insults API
+14. Better Doctor API
+
 
 
 ### License
