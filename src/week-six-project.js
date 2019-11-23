@@ -14,6 +14,7 @@ export class DoctorByCondition {
   }
 }
 
+
 export class DoctorByName {
   async getDocByName(inputedName) {
     try {
