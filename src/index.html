@@ -10,23 +10,31 @@
         <h2>Our application will help you find doctors that can help with your condition! </h2>
         <br>
         <br>
+
         <!-- SEARCH DOC BY CONDITION -->
         <p>Search doctors by medical condition</p>
         <label for="conditionInputSection">Please input your condition below!</label>
         <input id="inputedCondition" placeholder="Cold" type="text">
         <button class="btn-success" id="conInput">Submit</button>
+        <!-- SHOW CONDITION RESULTS SECTION -->
         <!-- Will BE HIDDEN TILL CONDTION BTN IS CLICKED -->
         <br>
         <h2><span id="showConditionSection"></span></h2>
         <ul>
+          <!-- DOC 1 DETAILS -->
           <li><span id="doc1"></span></li>
+          <!-- DOC 2 DETAILS -->
           <li><span id="doc2"></span></li>
+          <!-- DOC 3 DETAILS -->
           <li><span id="doc3"></span></li>
+          <!-- DOC 4 DETAILS -->
           <li><span id="doc4"></span></li>
+          <!-- DOC 5 DETAILS -->
           <li><span id="doc5"></span></li>
         </ul>
 
         <!-- QUICK FIX FOR NOW/FUNCTION DELEGATION -->
+        <!-- WILL USE IF STATEMENT TO FEED INTO EITHER FUNCTION -->
         <h2>Or</h2>
 
         <!-- SEARCH DOC BY NAME -->
@@ -34,36 +42,41 @@
         <label for="nameInputSection">Please input desired doctors name below!</label>
         <input id="inputedName" placeholder="Mark" type="text">
         <button class="btn-success" id="nameInput">Submit</button>
+
         <!-- SHOW SEARCH BY CONDITION RESULTS -->
+        <!-- Will BE HIDDEN TILL NAMEIPT BTN IS CLICKED -->
         <h2><span id="showByNameSection"></span></h2>
         <ul>
+          <!-- DOC1 DETAILS-->
           <li><span id="docByName1"></span><br>
             <span id="docPhone1"></span><br>
             <span id="docWebSite1"></span>
           </li>
-
+          <br>
+          <!-- DOC2 DETAILS-->
           <li><span id="docByName2"></span><br>
             <span id="docPhone2"></span><br>
             <span id="docWebSite2"></span>
           </li>
-
+          <br>
+          <!-- DOC3 DETAILS-->
           <li><span id="docByName3"></span><br>
             <span id="docPhone3"></span><br>
             <span id="docWebSite3"></span>
           </li>
-
+          <br>
+          <!-- DOC4 DETAILS-->
           <li><span id="docByName4"></span><br>
             <span id="docPhone4"></span><br>
             <span id="docWebSite4"></span>
           </li>
-
+          <br>
+          <!-- DOC5 DETAILS -->
           <li><span id="docByName5"></span><br>
             <span id="docPhone5"></span><br>
             <span id="docWebSite5"></span>
           </li>
-
         </ul>
-
       </div>
     </div>
   </div>
