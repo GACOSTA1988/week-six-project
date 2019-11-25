@@ -40,30 +40,40 @@ $(document).ready(function() {
       console.log(responseName);
       getElementsNameBase(responseName);
     })();
+    // THIS WILL CATCH UNDEFINED WEBSITE RETURN
+    const printWebsiteUrl = (practicesObject) => {
+      if (practicesObject && practicesObject.website) {
+        return `Doctor Website: ${practicesObject.website}`;
+      } else {
+        return "No website for this practice";
+      }
+    };
 
+    // THIS WILL CATCH UNDEFINED NUMBER RESULTS
+    
     // THIS WILL DISPLAY API FUNCTION RETURN ON (DOM)
     function getElementsNameBase(responseName) {
       $("#showByNameSection").text(`The following doctors names best match ${inputedName}:`);
 
       $("#docByName1").text(`${responseName.data[0].profile.first_name} ${responseName.data[0].profile.middle_name} ${responseName.data[0].profile.last_name}, ${responseName.data[0].profile.title}`);
       $("#docPhone1").text(`Phone Number: ${responseName.data[0].practices[0].phones[0].number}`);
-      $("#docWebSite1").text(`Doctor Website: ${responseName.data[0].practices[0].website}`);
-      //
+      $("#docWebSite1").text(printWebsiteUrl(responseName.data[0].practices[0]));
+
       $("#docByName2").text(`${responseName.data[1].profile.first_name} ${responseName.data[1].profile.middle_name} ${responseName.data[1].profile.last_name}, ${responseName.data[1].profile.title}`);
       $("#docPhone2").text(`Phone Number: ${responseName.data[1].practices[0].phones[0].number}`);
-      $("#docWebSite2").text(`Doctor Website: ${responseName.data[1].practices[0].website}`);
+      $("#docWebSite2").text(printWebsiteUrl(responseName.data[1].practices[0]));
 
       $("#docByName3").text(`${responseName.data[2].profile.first_name} ${responseName.data[2].profile.middle_name} ${responseName.data[2].profile.last_name}, ${responseName.data[2].profile.title}`);
       $("#docPhone3").text(`Phone Number: ${responseName.data[2].practices[0].phones[0].number}`);
-      $("#docWebSite3").text(`Doctor Website: ${responseName.data[2].practices[0].website}`);
+      $("#docWebSite3").text(printWebsiteUrl(responseName.data[2].practices[0]));
 
       $("#docByName4").text(`${responseName.data[3].profile.first_name} ${responseName.data[3].profile.middle_name} ${responseName.data[3].profile.last_name}, ${responseName.data[3].profile.title}`);
       $("#docPhone4").text(`Phone Number: ${responseName.data[3].practices[0].phones[0].number}`);
-      $("#docWebSite4").text(`Doctor Website: ${responseName.data[3].practices[0].website}`);
+      $("#docWebSite4").text(printWebsiteUrl(responseName.data[3].practices[0]));
 
       $("#docByName5").text(`${responseName.data[4].profile.first_name} ${responseName.data[4].profile.middle_name} ${responseName.data[4].profile.last_name}, ${responseName.data[4].profile.title}`);
       $("#docPhone5").text(`Phone Number: ${responseName.data[4].practices[0].phones[0].number}`);
-      $("#docWebSite5").text(`Doctor Website: ${responseName.data[4].practices[0].website}`);
+      $("#docWebSite5").text(printWebsiteUrl(responseName.data[4].practices[0]));
     }
   });
 });
